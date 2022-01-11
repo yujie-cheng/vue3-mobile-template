@@ -2,7 +2,7 @@ const routes = [
   {
     path: '/hello',
     name: 'Hello',
-    component: ()=> import('../pages/HelloWord/index'),
+    component: ()=> import('../pages/hello-world/index'),
     meta: {
       keepAlive: true,
       title: 'Hello'
