@@ -1,5 +1,14 @@
 const routes = [
   {
+    path: '/',
+    name: 'Home',
+    component: ()=> import('../pages/home/index'),
+    meta: {
+      keepAlive: true,
+      title: 'Home'
+    }
+  },
+  {
     path: '/hello',
     name: 'Hello',
     component: ()=> import('../pages/hello-world/index'),
@@ -26,6 +35,10 @@ const routes = [
       title: '404'
     }
   },
+  {
+    path: "/:catchAll(.*)",
+    redirect: '/404',
+  }
 ]
 
 export default routes
